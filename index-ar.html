@@ -627,30 +627,46 @@
   </section>
 
 
-  <section id="contact" class="padding-small">
+  <section id="contact" class="padding-small" dir="rtl">
     <div class="container text-center">
-      <h3 class="display-6 fw-semibold mb-4">تحدث مع متخصصينا</h3>
-      <form id="contactForm" class="contact-form row mt-5">
+      <h3 class="display-6 fw-semibold mb-4">استفسر من متخصصينا</h3>
+      
+      <!-- Flexbox layout for contact form and map -->
+      <div class="row">
+        <!-- Google Map (Left Side for Arabic Site) -->
         <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-          <input type="text" name="name" id="name" placeholder="الاسم الكامل*" class="form-control w-100 ps-3 py-2 rounded-0" required>
+          <div class="map-container">
+            <!-- Google Map Embed Code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4436.197763240585!2d43.9696644!3d26.3580175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x157f594c128dc2a5%3A0xb43199aa957c4c37!2zQ29sZCBFZmZpY2llbmN5IEVzdGFibGlzaG1lbnQgLSDZhdik2LPYs9ipINin2YTZg9mB2KfYodipINin2YTYqNin2LHYr9ipINmE2YTYtdmK2KfZhtip!5e1!3m2!1sen!2ssa!4v1742034561978!5m2!1sen!2ssa" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
+
+        <!-- Contact Form (Right Side for Arabic Site) -->
         <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-          <input type="text" name="phone" id="phone" placeholder="رقم الهاتف*" class="form-control w-100 ps-3 py-2 rounded-0" required>
+          <form id="contactForm" class="contact-form">
+            <div class="mb-4">
+              <input type="text" name="name" id="name" placeholder="الاسم الكامل*" class="form-control w-100 ps-3 py-2 rounded-0" required>
+            </div>
+            <div class="mb-4">
+              <input type="text" name="phone" id="phone" placeholder="الهاتف*" class="form-control w-100 ps-3 py-2 rounded-0" required>
+            </div>
+            <div class="mb-4">
+              <input type="text" name="address" id="address" placeholder="العنوان*" class="form-control w-100 ps-3 py-2 rounded-0" required>
+            </div>
+            <div class="mb-4">
+              <textarea class="form-control w-100 ps-3 py-2 rounded-0" rows="6" name="message" id="message" placeholder="الرسالة"></textarea>
+            </div>
+            <div class="mb-4">
+              <button type="button" class="btn btn-primary btn-slide hover-slide-right" onclick="sendWhatsAppMessage()">
+                <span>إرسال الآن</span>
+              </button>
+            </div>
+          </form>
         </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-          <input type="text" name="address" id="address" placeholder="العنوان*" class="form-control w-100 ps-3 py-2 rounded-0" required>
-        </div>
-        <div class="col-md-12 col-sm-12 mb-4">
-          <textarea class="form-control w-100 ps-3 py-2 rounded-0" rows="6" name="message" id="message" placeholder="رسالتك"></textarea>
-        </div>
-        <div class="col-12">
-          <button type="button" class="btn btn-primary btn-slide hover-slide-right mt-4" onclick="sendWhatsAppMessage()">
-            <span>إرسال الآن</span>
-          </button>
-        </div>
-      </form>
+      </div>
     </div>
-  </section>
+</section>
+
 
   
   <script>
@@ -973,7 +989,7 @@
               <li class="fw-medium text-capitalize d-flex align-items-center">
                 <svg class="text-primary me-1" width="18" height="18">
                   <use xlink:href="#location"></use>
-                </svg><a href="#"> بريدة 52381، المملكة العربية السعودية </a>
+                </svg><a href="https://g.co/kgs/ZQ6Xzr9"> بريدة 52381، المملكة العربية السعودية </a>
               </li>
               <li class="fw-medium text-capitalize d-flex align-items-center">
                 <svg class="text-primary me-1" width="18" height="18">
